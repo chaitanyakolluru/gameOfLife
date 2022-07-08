@@ -1,5 +1,5 @@
-import { Cell } from '../Cell';
-import { moreThanThree } from './moreThanThree';
+import { Cell } from '../../src/Cell';
+import { moreThanThree } from '../../src/rules/moreThanThree';
 
 describe('more than three', () => {
   it('should exist', () => {

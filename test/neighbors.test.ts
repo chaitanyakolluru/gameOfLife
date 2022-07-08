@@ -1,5 +1,5 @@
-import { Cell } from './Cell';
-import { neighbors } from './neighbors';
+import { Cell } from '../src/Cell';
+import { neighbors } from '../src/neighbors';
 
 describe('neighbors function', () => {
   it('should exist and take in grid and a cell as args', () => {

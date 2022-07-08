@@ -1,5 +1,5 @@
-import { processGrid } from './processGrid';
-import { Cell } from './Cell';
+import { processGrid } from '../src/processGrid';
+import { Cell } from '../src/Cell';
 
 describe('process the grid', () => {
   it('should exist', () => {
@@ -22,7 +22,7 @@ describe('process the grid', () => {
     ]);
   });
 
-  it('should process a 3x3 grid and return a grid with alive cells; ex1', () => {
+  xit('should process a 3x3 grid and return a grid with alive cells; ex1', () => {
     // input:
     // 0 1 0
     // 1 1 1
@@ -53,7 +53,7 @@ describe('process the grid', () => {
     ]);
   });
 
-  fit('should process a 4x4 grid and return a grid with alive cells; ex2', () => {
+  it('should process a 4x4 grid and return a grid with alive cells; ex2', () => {
     // input:
     // 0 1 0 0
     // 1 0 1 1
