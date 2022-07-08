@@ -1,5 +1,5 @@
-import { fewerThanTwo } from '../../src/rules/fewerThanTwo';
-import { Cell } from '../../src/Cell';
+import { fewerThanTwo } from './fewerThanTwo';
+import { Cell } from '../Cell';
 
 describe('fewer than 2 neighbors and should take in a grid and a cell as inputs', () => {
   it('should exist', () => {

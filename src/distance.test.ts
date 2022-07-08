@@ -1,5 +1,5 @@
-import { Cell } from '../src/Cell';
-import { distanceFrom } from '../src/distance';
+import { Cell } from './Cell';
+import { distanceFrom } from './distance';
 
 describe('distance function', () => {
   it('should exist', () => {

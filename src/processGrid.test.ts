@@ -1,5 +1,5 @@
-import { processGrid } from '../src/processGrid';
-import { Cell } from '../src/Cell';
+import { processGrid } from './processGrid';
+import { Cell } from './Cell';
 
 describe('process the grid', () => {
   it('should exist', () => {

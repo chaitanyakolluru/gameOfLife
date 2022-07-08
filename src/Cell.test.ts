@@ -1,4 +1,4 @@
-import { Cell } from '../src/Cell';
+import { Cell } from './Cell';
 
 describe('cells', () => {
   it('should have a cell object with alive, x and y props', () => {
