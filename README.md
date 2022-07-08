@@ -14,7 +14,7 @@ All tests run clean and tests(processGrid.test.ts) show it successfully processe
     // 1 1 1
     // 1 1 1
     // 0 1 0
-    
+
     4x4
     // input:
     // 0 1 0 0
@@ -33,21 +33,154 @@ Still needs a way to randomize an initial state and also calculating out of boun
 ## usage
 
 Install dependencies
+
 ```bash
 npm install
 ```
 
 Run tests
+
 ```bash
 npm test
 ```
 
 Build project
+
 ```bash
 npm run script:build
 ```
 
 Run project
+
 ```bash
 npm run script:run
+```
+
+Sample output based on a seed of 5 with gridGenerator() (index.ts):
+
+Index.ts:
+
+```javascript
+import { gridGenerator } from './grid';
+import { processGrid } from './processGrid';
+import { Cell } from './Cell';
+
+const awesomeThingsHappen = (grid: Array<Cell>): void => {
+  const gr2 = processGrid(grid);
+  console.log(gr2);
+  setTimeout(() => {
+    awesomeThingsHappen(gr2);
+  }, 10000);
+};
+
+/*
+  gridGenerator generates a grid that results in still lifes as can be seen in the below output
+  gridGenerator assigns a cell as alive if the sum of x and y cooridnates equals an even number and dead if it sums upto an odd numbe
+*/
+const gr = gridGenerator(5);
+awesomeThingsHappen(gr);
+```
+
+Output:
+
+```properties
+[script:*run] [
+[script:*run]   Cell { alive: true, x: 0, y: 1 },
+[script:*run]   Cell { alive: true, x: 0, y: 2 },
+[script:*run]   Cell { alive: true, x: 0, y: 3 },
+[script:*run]   Cell { alive: true, x: 1, y: 0 },
+[script:*run]   Cell { alive: true, x: 1, y: 4 },
+[script:*run]   Cell { alive: true, x: 2, y: 0 },
+[script:*run]   Cell { alive: true, x: 2, y: 4 },
+[script:*run]   Cell { alive: true, x: 3, y: 0 },
+[script:*run]   Cell { alive: true, x: 3, y: 4 },
+[script:*run]   Cell { alive: true, x: 4, y: 1 },
+[script:*run]   Cell { alive: true, x: 4, y: 2 },
+[script:*run]   Cell { alive: true, x: 4, y: 3 }
+[script:*run] ]
+[script:*run] [
+[script:*run]   Cell { alive: true, x: 0, y: 1 },
+[script:*run]   Cell { alive: true, x: 0, y: 2 },
+[script:*run]   Cell { alive: true, x: 0, y: 3 },
+[script:*run]   Cell { alive: true, x: 1, y: 0 },
+[script:*run]   Cell { alive: true, x: 1, y: 4 },
+[script:*run]   Cell { alive: true, x: 2, y: 0 },
+[script:*run]   Cell { alive: true, x: 2, y: 4 },
+[script:*run]   Cell { alive: true, x: 3, y: 0 },
+[script:*run]   Cell { alive: true, x: 3, y: 4 },
+[script:*run]   Cell { alive: true, x: 4, y: 1 },
+[script:*run]   Cell { alive: true, x: 4, y: 2 },
+[script:*run]   Cell { alive: true, x: 4, y: 3 }
+[script:*run] ]
+[script:*run] [
+[script:*run]   Cell { alive: true, x: 0, y: 1 },
+[script:*run]   Cell { alive: true, x: 0, y: 2 },
+[script:*run]   Cell { alive: true, x: 0, y: 3 },
+[script:*run]   Cell { alive: true, x: 1, y: 0 },
+[script:*run]   Cell { alive: true, x: 1, y: 4 },
+[script:*run]   Cell { alive: true, x: 2, y: 0 },
+[script:*run]   Cell { alive: true, x: 2, y: 4 },
+[script:*run]   Cell { alive: true, x: 3, y: 0 },
+[script:*run]   Cell { alive: true, x: 3, y: 4 },
+[script:*run]   Cell { alive: true, x: 4, y: 1 },
+[script:*run]   Cell { alive: true, x: 4, y: 2 },
+[script:*run]   Cell { alive: true, x: 4, y: 3 }
+[script:*run] ]
+[script:*run] [
+[script:*run]   Cell { alive: true, x: 0, y: 1 },
+[script:*run]   Cell { alive: true, x: 0, y: 2 },
+[script:*run]   Cell { alive: true, x: 0, y: 3 },
+[script:*run]   Cell { alive: true, x: 1, y: 0 },
+[script:*run]   Cell { alive: true, x: 1, y: 4 },
+[script:*run]   Cell { alive: true, x: 2, y: 0 },
+[script:*run]   Cell { alive: true, x: 2, y: 4 },
+[script:*run]   Cell { alive: true, x: 3, y: 0 },
+[script:*run]   Cell { alive: true, x: 3, y: 4 },
+[script:*run]   Cell { alive: true, x: 4, y: 1 },
+[script:*run]   Cell { alive: true, x: 4, y: 2 },
+[script:*run]   Cell { alive: true, x: 4, y: 3 }
+[script:*run] ]
+[script:*run] [
+[script:*run]   Cell { alive: true, x: 0, y: 1 },
+[script:*run]   Cell { alive: true, x: 0, y: 2 },
+[script:*run]   Cell { alive: true, x: 0, y: 3 },
+[script:*run]   Cell { alive: true, x: 1, y: 0 },
+[script:*run]   Cell { alive: true, x: 1, y: 4 },
+[script:*run]   Cell { alive: true, x: 2, y: 0 },
+[script:*run]   Cell { alive: true, x: 2, y: 4 },
+[script:*run]   Cell { alive: true, x: 3, y: 0 },
+[script:*run]   Cell { alive: true, x: 3, y: 4 },
+[script:*run]   Cell { alive: true, x: 4, y: 1 },
+[script:*run]   Cell { alive: true, x: 4, y: 2 },
+[script:*run]   Cell { alive: true, x: 4, y: 3 }
+[script:*run] ]
+[script:*run] [
+[script:*run]   Cell { alive: true, x: 0, y: 1 },
+[script:*run]   Cell { alive: true, x: 0, y: 2 },
+[script:*run]   Cell { alive: true, x: 0, y: 3 },
+[script:*run]   Cell { alive: true, x: 1, y: 0 },
+[script:*run]   Cell { alive: true, x: 1, y: 4 },
+[script:*run]   Cell { alive: true, x: 2, y: 0 },
+[script:*run]   Cell { alive: true, x: 2, y: 4 },
+[script:*run]   Cell { alive: true, x: 3, y: 0 },
+[script:*run]   Cell { alive: true, x: 3, y: 4 },
+[script:*run]   Cell { alive: true, x: 4, y: 1 },
+[script:*run]   Cell { alive: true, x: 4, y: 2 },
+[script:*run]   Cell { alive: true, x: 4, y: 3 }
+[script:*run] ]
+[script:*run] [
+[script:*run]   Cell { alive: true, x: 0, y: 1 },
+[script:*run]   Cell { alive: true, x: 0, y: 2 },
+[script:*run]   Cell { alive: true, x: 0, y: 3 },
+[script:*run]   Cell { alive: true, x: 1, y: 0 },
+[script:*run]   Cell { alive: true, x: 1, y: 4 },
+[script:*run]   Cell { alive: true, x: 2, y: 0 },
+[script:*run]   Cell { alive: true, x: 2, y: 4 },
+[script:*run]   Cell { alive: true, x: 3, y: 0 },
+[script:*run]   Cell { alive: true, x: 3, y: 4 },
+[script:*run]   Cell { alive: true, x: 4, y: 1 },
+[script:*run]   Cell { alive: true, x: 4, y: 2 },
+[script:*run]   Cell { alive: true, x: 4, y: 3 }
+[script:*run] ]
+...
 ```

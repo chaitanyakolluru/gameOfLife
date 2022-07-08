@@ -22,6 +22,17 @@ describe('process the grid', () => {
     ]);
   });
 
+  it('should take in a grid and return a grid only with alive elements', () => {
+    expect(
+      processGrid([
+        Cell.createCell(true, 0, 0),
+        Cell.createCell(false, 0, 1),
+        Cell.createCell(false, 1, 0),
+        Cell.createCell(true, 1, 1),
+      ])
+    ).toStrictEqual([]);
+  });
+
   it('should process a 3x3 grid and return a grid with alive cells; ex1', () => {
     // input:
     // 0 1 0
