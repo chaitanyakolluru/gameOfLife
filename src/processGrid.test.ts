@@ -22,7 +22,7 @@ describe('process the grid', () => {
     ]);
   });
 
-  xit('should process a 3x3 grid and return a grid with alive cells; ex1', () => {
+  it('should process a 3x3 grid and return a grid with alive cells; ex1', () => {
     // input:
     // 0 1 0
     // 1 1 1
@@ -30,8 +30,9 @@ describe('process the grid', () => {
 
     // output:
     // 1 1 1
+    // 1 1 1
     // 0 1 0
-    // 0 1 0
+
     expect(
       processGrid([
         Cell.createCell(false, 0, 0),
@@ -48,7 +49,9 @@ describe('process the grid', () => {
       Cell.createCell(true, 0, 0),
       Cell.createCell(true, 0, 1),
       Cell.createCell(true, 0, 2),
+      Cell.createCell(true, 1, 0),
       Cell.createCell(true, 1, 1),
+      Cell.createCell(true, 1, 2),
       Cell.createCell(true, 2, 1),
     ]);
   });
