@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf build",
-    "test": "jest --rootDir=./ --watchAll",
+    "test": "jest",
     "script:build": "tsc -w",
     "script:run": "nodemon build/index.js",
     "start": "concurrently npm:script:*"
