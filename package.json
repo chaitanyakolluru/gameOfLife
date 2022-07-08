@@ -1,0 +1,27 @@
+{
+  "name": "gameoflife",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --rootDir=./ --watchAll",
+    "script:build": "tsc -w",
+    "script:run": "nodemon build/index.js",
+    "start": "concurrently npm:script:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^28.1.4",
+    "@types/node": "^18.0.3",
+    "concurrently": "^7.2.2",
+    "jest": "^28.1.2",
+    "nodemon": "^2.0.19",
+    "ts-jest": "^28.0.5",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "Math": "0.0.1-security"
+  }
+}
