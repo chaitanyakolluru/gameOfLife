@@ -184,3 +184,43 @@ Output:
 [script:*run] ]
 ...
 ```
+
+```
+gameOfLife ➤ npm test -- --coverage                                                                                                                                                                                                                                                                             git:main
+
+> gameoflife@1.0.0 test /Users/a990354/Documents/gameOfLife
+> jest "--coverage"
+
+ PASS  src/Cell.test.ts (5.205 s)
+ PASS  src/grid.test.ts (5.232 s)
+ PASS  src/neighbors.test.ts (5.389 s)
+ PASS  src/rules/twoOrThree.test.ts
+ PASS  src/processGrid.test.ts (5.425 s)
+ PASS  src/rules/moreThanThree.test.ts
+ PASS  src/distance.test.ts (5.456 s)
+ PASS  src/rules/fewerThanTwo.test.ts (5.431 s)
+ PASS  src/rules/comesBackAlive.test.ts (5.483 s)
+--------------------|---------|----------|---------|---------|-------------------
+File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------|---------|----------|---------|---------|-------------------
+All files           |     100 |      100 |     100 |     100 |                   
+ src                |     100 |      100 |     100 |     100 |                   
+  Cell.ts           |     100 |      100 |     100 |     100 |                   
+  distance.ts       |     100 |      100 |     100 |     100 |                   
+  grid.ts           |     100 |      100 |     100 |     100 |                   
+  neighbors.ts      |     100 |      100 |     100 |     100 |                   
+  processGrid.ts    |     100 |      100 |     100 |     100 |                   
+ src/rules          |     100 |      100 |     100 |     100 |                   
+  comesBackAlive.ts |     100 |      100 |     100 |     100 |                   
+  fewerThanTwo.ts   |     100 |      100 |     100 |     100 |                   
+  index.ts          |     100 |      100 |     100 |     100 |                   
+  moreThanThree.ts  |     100 |      100 |     100 |     100 |                   
+  twoOrThree.ts     |     100 |      100 |     100 |     100 |                   
+--------------------|---------|----------|---------|---------|-------------------
+
+Test Suites: 9 passed, 9 total
+Tests:       39 passed, 39 total
+Snapshots:   0 total
+Time:        6.037 s
+Ran all test suites.
+```
