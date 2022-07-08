@@ -1,4 +1,4 @@
-# gameOfLife
+# gameOfLife: https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
 
 All tests run clean and tests(processGrid.test.ts) show it successfully processes 3x3or 4x4. 
 
