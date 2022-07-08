@@ -8,19 +8,19 @@ import {
 
 export const processGrid = (grid: Array<Cell>): Array<Cell> => {
   let res: Array<Cell> = [];
-  grid.forEach((c: Cell) => {
-    if (
+
+  res = grid.filter((c: Cell) => {
+    return (
       fewerThanTwo(grid, c) &&
       twoOrThree(grid, c) &&
       moreThanThree(grid, c) &&
       comesBackAlive(grid, c)
-    ) {
-      res.push(c);
-    }
+    );
   });
 
   res.map((c: Cell) => {
     c.alive = true;
   });
+
   return res;
 };
