@@ -1,8 +1,8 @@
-# gameOfLife: 
+# gameOfLife:
 
 `https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life`
 
-All tests run clean and tests(processGrid.test.ts) show it successfully processes 3x3or 4x4. 
+All tests run clean and tests(processGrid.test.ts) show it successfully processes 3x3or 4x4.
 
     3x3
     // input:
@@ -14,7 +14,7 @@ All tests run clean and tests(processGrid.test.ts) show it successfully processe
     // 1 1 1
     // 0 1 0
     // 0 1 0
-    
+
     4x4
     // input:
     // 0 1 0 0
@@ -28,4 +28,26 @@ All tests run clean and tests(processGrid.test.ts) show it successfully processe
     // 1 0 0 1
     // 0 0 1 0
 
-Still needs a way to randomize an initial state and also calculating out of bounds dead cell recreation, but the app should take in an input grid and result in a successful alive snapshot of the cells. 
+Still needs a way to randomize an initial state and also calculating out of bounds dead cell recreation, but the app should take in an input grid and result in a successful alive snapshot of the cells.
+
+## usage
+
+Install dependencies
+```bash
+npm install
+```
+
+Run tests
+```bash
+npm test
+```
+
+Build project
+```bash
+npm run script:build
+```
+
+Run project
+```bash
+npm run script:run
+```

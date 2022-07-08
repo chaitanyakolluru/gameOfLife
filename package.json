@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --rootDir=./ --watchAll",
+    "clean": "rm -rf build",
+    "test": "jest",
     "script:build": "tsc -w",
     "script:run": "nodemon build/index.js",
     "start": "concurrently npm:script:*"
