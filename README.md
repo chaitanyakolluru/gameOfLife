@@ -73,8 +73,11 @@ const awesomeThingsHappen = (grid: Array<Cell>): void => {
   }, 10000);
 };
 
-const gr = gridGenerator(5); //gridGenerator generates a grid that results in still lifes as can be seen in the below output
-// gridGenerator assigns a cell as alive if the sum of x and y cooridnates equals an even number and dead if it sums upto an odd number
+/*
+  gridGenerator generates a grid that results in still lifes as can be seen in the below output
+  gridGenerator assigns a cell as alive if the sum of x and y cooridnates equals an even number and dead if it sums upto an odd numbe
+*/
+const gr = gridGenerator(5);
 awesomeThingsHappen(gr);
 ```
 
