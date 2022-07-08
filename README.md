@@ -12,9 +12,9 @@ All tests run clean and tests(processGrid.test.ts) show it successfully processe
 
     // output:
     // 1 1 1
+    // 1 1 1
     // 0 1 0
-    // 0 1 0
-
+    
     4x4
     // input:
     // 0 1 0 0
