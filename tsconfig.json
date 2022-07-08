@@ -6,8 +6,8 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
-    "rootDir": ".",
-    "outDir": "build"
+    "rootDir": "./src",
+    "outDir": "./build"
   },
   "exclude": ["./build/**/*"]
 }
