@@ -10,6 +10,6 @@ const awesomeThingsHappen = (grid: Array<Cell>, n: number): void => {
   }, 10000);
 };
 
-const [gr, n] = gridGenerator(5);
-console.log('initial grid', gr);
+const [gr, n] = gridGenerator(5); // gridGenerator assigns a cell as being alive if the sum of x and y cooridnates equals an even number and dead if they sum upto an odd number
+console.log('Initial grid: ', gr);
 awesomeThingsHappen(gr, n);
