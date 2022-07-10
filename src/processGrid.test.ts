@@ -169,39 +169,4 @@ describe('process the grid', () => {
       Cell.createCell(true, 4, 3),
     ]);
   });
-
-  xit('should process output of a collapsed grid from previous test; ex 4', () => {
-    expect(
-      processGrid(
-        [
-          Cell.createCell(true, 0, 1),
-          Cell.createCell(true, 0, 2),
-          Cell.createCell(true, 0, 3),
-          Cell.createCell(true, 1, 0),
-          Cell.createCell(true, 1, 4),
-          Cell.createCell(true, 2, 0),
-          Cell.createCell(true, 2, 4),
-          Cell.createCell(true, 3, 0),
-          Cell.createCell(true, 3, 4),
-          Cell.createCell(true, 4, 1),
-          Cell.createCell(true, 4, 2),
-          Cell.createCell(true, 4, 3),
-        ],
-        5
-      )
-    ).toStrictEqual([
-      Cell.createCell(true, 0, 1),
-      Cell.createCell(true, 0, 2),
-      Cell.createCell(true, 0, 3),
-      Cell.createCell(true, 1, 0),
-      Cell.createCell(true, 1, 4),
-      Cell.createCell(true, 2, 0),
-      Cell.createCell(true, 2, 4),
-      Cell.createCell(true, 3, 0),
-      Cell.createCell(true, 3, 4),
-      Cell.createCell(true, 4, 1),
-      Cell.createCell(true, 4, 2),
-      Cell.createCell(true, 4, 3),
-    ]);
-  });
 });
