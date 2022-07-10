@@ -1,6 +1,6 @@
 import { Cell } from './Cell';
 
-export const gridGenerator = (x: number): Array<Cell> => {
+export const gridGenerator = (x: number): [Array<Cell>, number] => {
   let res: Array<Cell> = [];
   for (let i = 0; i <= x - 1; i++) {
     for (let j = 0; j <= x - 1; j++) {
@@ -11,5 +11,5 @@ export const gridGenerator = (x: number): Array<Cell> => {
       }
     }
   }
-  return res;
+  return [res, x];
 };

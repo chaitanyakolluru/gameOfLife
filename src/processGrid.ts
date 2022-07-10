@@ -1,4 +1,5 @@
 import { Cell } from './Cell';
+import { gridExpander } from './gridExpander';
 import {
   fewerThanTwo,
   twoOrThree,
@@ -6,10 +7,10 @@ import {
   comesBackAlive,
 } from './rules';
 
-export const processGrid = (grid: Array<Cell>): Array<Cell> => {
+export const processGrid = (grid: Array<Cell>, x: number): Array<Cell> => {
   let res: Array<Cell> = [];
 
-  res = grid.filter((c: Cell) => {
+  res = gridExpander(grid, x).filter((c: Cell) => {
     return (
       fewerThanTwo(grid, c) &&
       twoOrThree(grid, c) &&
