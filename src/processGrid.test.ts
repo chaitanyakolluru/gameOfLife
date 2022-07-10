@@ -109,4 +109,81 @@ describe('process the grid', () => {
       Cell.createCell(true, 3, 2),
     ]);
   });
+
+  it('should process a 5x5 grid and return a grid with alive cells; ex3', () => {
+    expect(
+      processGrid([
+        Cell.createCell(true, 0, 0),
+        Cell.createCell(false, 0, 1),
+        Cell.createCell(true, 0, 2),
+        Cell.createCell(false, 0, 3),
+        Cell.createCell(true, 0, 4),
+        Cell.createCell(false, 1, 0),
+        Cell.createCell(true, 1, 1),
+        Cell.createCell(false, 1, 2),
+        Cell.createCell(true, 1, 3),
+        Cell.createCell(false, 1, 4),
+        Cell.createCell(true, 2, 0),
+        Cell.createCell(false, 2, 1),
+        Cell.createCell(true, 2, 2),
+        Cell.createCell(false, 2, 3),
+        Cell.createCell(true, 2, 4),
+        Cell.createCell(false, 3, 0),
+        Cell.createCell(true, 3, 1),
+        Cell.createCell(false, 3, 2),
+        Cell.createCell(true, 3, 3),
+        Cell.createCell(false, 3, 4),
+        Cell.createCell(true, 4, 0),
+        Cell.createCell(false, 4, 1),
+        Cell.createCell(true, 4, 2),
+        Cell.createCell(false, 4, 3),
+        Cell.createCell(true, 4, 4),
+      ])
+    ).toStrictEqual([
+      Cell.createCell(true, 0, 1),
+      Cell.createCell(true, 0, 2),
+      Cell.createCell(true, 0, 3),
+      Cell.createCell(true, 1, 0),
+      Cell.createCell(true, 1, 4),
+      Cell.createCell(true, 2, 0),
+      Cell.createCell(true, 2, 4),
+      Cell.createCell(true, 3, 0),
+      Cell.createCell(true, 3, 4),
+      Cell.createCell(true, 4, 1),
+      Cell.createCell(true, 4, 2),
+      Cell.createCell(true, 4, 3),
+    ]);
+  });
+
+  it('should process output of a collapsed grid from previous test; ex 4', () => {
+    expect(
+      processGrid([
+        Cell.createCell(true, 0, 1),
+        Cell.createCell(true, 0, 2),
+        Cell.createCell(true, 0, 3),
+        Cell.createCell(true, 1, 0),
+        Cell.createCell(true, 1, 4),
+        Cell.createCell(true, 2, 0),
+        Cell.createCell(true, 2, 4),
+        Cell.createCell(true, 3, 0),
+        Cell.createCell(true, 3, 4),
+        Cell.createCell(true, 4, 1),
+        Cell.createCell(true, 4, 2),
+        Cell.createCell(true, 4, 3),
+      ])
+    ).toStrictEqual([
+      Cell.createCell(true, 0, 1),
+      Cell.createCell(true, 0, 2),
+      Cell.createCell(true, 0, 3),
+      Cell.createCell(true, 1, 0),
+      Cell.createCell(true, 1, 4),
+      Cell.createCell(true, 2, 0),
+      Cell.createCell(true, 2, 4),
+      Cell.createCell(true, 3, 0),
+      Cell.createCell(true, 3, 4),
+      Cell.createCell(true, 4, 1),
+      Cell.createCell(true, 4, 2),
+      Cell.createCell(true, 4, 3),
+    ]);
+  });
 });

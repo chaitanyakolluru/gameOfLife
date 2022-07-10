@@ -11,4 +11,5 @@ const awesomeThingsHappen = (grid: Array<Cell>): void => {
 };
 
 const gr = gridGenerator(5);
+console.log('initial grid', gr);
 awesomeThingsHappen(gr);
